@@ -1,13 +1,10 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.*;
 
 public class zavd_1 {
     public static void main(String[] args) {
         int[] a = {1,2,9};
         int[] b = {3,2,6};
-        findSumOfArrays(a, b);
+        Arrays.stream(findSumOfArrays(a, b)).forEach(System.out::print);
     }
 
     static int[] findSumOfArrays(int[] first, int[] second) {
@@ -67,19 +64,19 @@ public class zavd_1 {
                 }
                 check = false;
             }
-            if (ost != 0) {
-                int[] newAnsw = new int[answ.length + 1];
-                for(int i = 0; i< answ.length; i++){
-                    newAnsw[i+1] = answ[i];
-                }
-                newAnsw[0] = ost;
-                return newAnsw;
-            }
-            return answ;
+
         }
-
-
+        if (ost != 0) {
+            int[] newAnsw = new int[answ.length + 1];
+            for(int i = 0; i< answ.length; i++){
+                newAnsw[i+1] = answ[i];
+            }
+            newAnsw[0] = ost;
+            return newAnsw;
+        }
         return answ;
+
+
     }
 
 }

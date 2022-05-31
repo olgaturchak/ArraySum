@@ -6,7 +6,7 @@ import java.util.Deque;
 public class zavd_1 {
     public static void main(String[] args) {
         int[] a = {1,2,9};
-        int[] b = {3,2,6};
+        int[] b = {9,2,6};
         Arrays.stream(findSumOfArrays(a, b)).forEach(System.out::print);
     }
 
